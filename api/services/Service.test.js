@@ -13,7 +13,7 @@ describe('sevice class', () => {
   let ExtendedServiceInstance;
 
   mockAxios.get.mockImplementationOnce(() => {
-    return Promise.resolve(true);
+    return Promise.resolve({ data: true });
   })
 
   beforeEach(() => {

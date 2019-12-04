@@ -8,7 +8,7 @@ const router = new Router();
 
 router.get('/forecast', async (ctx, next) => {
   const forecast = await get.forecast.city();
-  ctx.body = forecast.data;
+  ctx.body = forecast;
 });
 
 app

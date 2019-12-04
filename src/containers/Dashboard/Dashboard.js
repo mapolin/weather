@@ -43,6 +43,7 @@ class Dashboard extends React.Component {
 
 
 const mapStateToProps = (state) => state;
+const mapDispatchToProps = () => {}
 export default connect(mapStateToProps)(withStyles(theme => ({
   root: {
     flexGrow: 1,

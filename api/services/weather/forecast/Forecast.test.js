@@ -6,7 +6,7 @@ const forecastResponse = require('../../../../__fixtures__/forecast.response');
 
 describe('Forecast class', () => {
   mockAxios.get.mockImplementationOnce(() => {
-    return Promise.resolve(forecastResponse);
+    return Promise.resolve({ data: forecastResponse });
   })
 
   let ForecastInstance;
@@ -20,6 +20,7 @@ describe('Forecast class', () => {
 
   it('should implement a method "city" which returns a forecast for a city', async () => {
     const response = await ForecastInstance.city();
+    console.log('TEST:', response)
     expect(response).toEqual(forecastResponse);
   });
 });
