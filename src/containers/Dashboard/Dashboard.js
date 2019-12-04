@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -43,10 +43,11 @@ class Dashboard extends React.Component {
 
 
 const mapStateToProps = (state) => state;
-const mapDispatchToProps = () => {}
 export default connect(mapStateToProps)(withStyles(theme => ({
   root: {
     flexGrow: 1,
+    maxWidth: 1024,
+    margin: '0 auto'
   },
   paper: {
     width: 140,

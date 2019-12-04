@@ -16,3 +16,5 @@ app
   .use(router.routes())
   .use(router.allowedMethods())
   .listen(3030);
+
+console.log('API Server listening on port :3030');

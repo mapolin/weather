@@ -9,6 +9,10 @@ function reducer (state, action ) {
       nextState.status = action.payload.cod;
       nextState.list = Array.from(groupDays(action.payload.list).entries());
       nextState.city = action.payload.city;
+      break;
+    }
+    default: {
+      return nextState;
     }
   }
 
